@@ -22,16 +22,16 @@ var layer = {
     'circle-color': {
 
       // Name of property to drive style from
-      property: 'FATALITY',
+      property: 'ALCOHOL_RELATED',
 
       // Type of styling. Can be 'exponential', 'interval', or 'categorical'
-      type: 'interval',
+      type: 'categorical',
 
       // Change colors based on values. 0 is blue, and 1 is red.
       // See http://www.colourlovers.com/palettes for some colour suggestions
       stops: [
-        [0, '#4E89ED'],
-        [1, '#FF5E7C'],
+        ["No", '#4E89ED'],
+        ["Yes", '#FF5E7C'],
       ]
 
     // Properties are separated by commas
@@ -39,26 +39,26 @@ var layer = {
 
     // All circle paint properties are defined similarly
     'circle-opacity': {
-      property: 'FATALITY',
-      type: 'interval',
+      property: 'ALCOHOL_RELATED',
+      type: 'categorical',
       stops: [
-        [0, 0.25],
-        [1, 0.75],
+        ["No", 0.25],
+        ["Yes", 0.75],
       ]
     },
 
     'circle-radius': {
-      property: 'FATALITY',
-      type: 'exponential',
+      property: 'ALCOHOL_RELATED',
+      type: 'categorical',
       stops: [
-        [0, 1.5],
-        [9, 15],
+        ["No", 1.5],
+        ["Yes", 5],
       ]
     },
 
     // Properties can also just be a number or value
     'circle-stroke-width': 0.25,
     'circle-stroke-opacity': 0.2,
-    'circle-stroke-color': '#000000',
+    'circle-stroke-color': '#FF5E7C',
   }
 };
